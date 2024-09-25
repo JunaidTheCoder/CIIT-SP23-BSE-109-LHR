@@ -45,6 +45,8 @@ body{
   padding-bottom: 5px;
 }
 
+
+
 .card-container{
   display: flex;
   justify-content: center;
@@ -69,7 +71,7 @@ body{
 .card-content h3{
   font-size: 22px;
   margin-bottom: 8px;
-  font-family: sans-serif;
+  font-family;
 }
 .card-content p{
   color: #666;
@@ -86,6 +88,15 @@ body{
   border-radius: 4px;
   margin-top: 10px;
   position:static;
+  align-self: baseline;
+}
+.card-content .price-tag{
+  padding-top: 5px;
+  color:lightslategray;
+  font-family: sans-serif;
+  font-size: 15px;
+  font-style:normal;
+  font-weight: 550;
 }
 
 .footrimg{
