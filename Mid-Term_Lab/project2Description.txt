@@ -1,0 +1,4 @@
+n this project, I developed a personal portfolio website to showcase my web development skills.
+ I learned essential skills such as responsive design, HTML, CSS, and JavaScript, enhancing my ability to create user-friendly interfaces. 
+ The project also involved integrating APIs to display dynamic content, which improved my understanding of data handling and client-server interaction. 
+Overall, it was a valuable experience in demonstrating my capabilities to potential employers.
