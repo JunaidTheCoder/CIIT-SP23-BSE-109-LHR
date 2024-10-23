@@ -8,6 +8,8 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  
+  background-color: #979797;
 }
 
 /* Container for the form */
@@ -20,6 +22,8 @@ body {
   width: 100%;
   text-align: center;
   align-content: center;
+  background-color: #f4f3f3be;
+  
 }
 
 /* Form Heading */

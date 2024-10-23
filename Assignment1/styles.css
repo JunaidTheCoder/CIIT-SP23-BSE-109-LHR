@@ -12,7 +12,11 @@
   color: white;
   text-align: center; 
 }
-
+#header-content{
+  display: flexbox;
+  
+  flex-direction: row;
+}
 #header1{
   background-color:#f0f0f0;;
   position:sticky;
@@ -24,6 +28,42 @@
 #logo{
   padding-bottom: 0.5%;
   width: 17%;
+}
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: white;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin: 0 10px;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.nav-item a:hover {
+  color: #007BFF;
 }
 
 #mainPic{
@@ -58,10 +98,10 @@
   justify-content: space-between; /* Space between to push button to the bottom */
   width: 225px;
   background-color: white;
-  border-radius: 20px;
+  border-radius: 5px;
   overflow: hidden;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
   margin: 10px;
+  
 }
 
 .card img {
@@ -142,4 +182,21 @@
     }
     .divider::after {
       margin-left: 10px; /* Space between the text and the right line */
+    }
+
+    #above-footer{
+      display: flex;
+      flex-direction: row;
+      justify-content: right;
+      background-color: #cdc2c21d;
+    }
+    #contact{
+      display: flex;
+      flex-direction: row;
+      
+    }
+    .image{
+      width: 100%; 
+      padding-top: 10px;
+      padding-bottom: 5px;
     }
