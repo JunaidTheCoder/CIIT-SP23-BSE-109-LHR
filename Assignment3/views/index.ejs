@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        #offer {
+            background-color: purple;
+            height: 20px;
+            align-content: center;
+            font-size: 12px;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+        }
+
+        #mainPic {
+            width: 100%;
+            padding-top: 0;
+            padding-bottom: 5px;
+        }
+
+        #featureProduct {
+            font-size: 20px;
+            letter-spacing: 2px;
+            text-align: center;
+            padding-top: 10px;
+            font-weight: bold;
+            padding-bottom: 5px;
+        }
+
+        .price-tag {
+            color: lightslategray;
+            font-size: 15px;
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 20px 20px;
+            font-size: 18px;
+            color: #000;
+            font-weight: 900;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: "";
+            flex: 1;
+            border-bottom: 1.5px solid #dfd9d9;
+        }
+
+        .divider::before {
+            margin-right: 10px;
+        }
+
+        .divider::after {
+            margin-left: 10px;
+        }
+
+        #above-footer{
+      display: flex;
+      flex-direction: row;
+      justify-content: right;
+      background-color: #cdc2c21d;
+    }
+    #contact{
+      display: flex;
+      flex-direction: row;
+      
+    }
+    .image{
+      width: 100%; 
+      padding-top: 10px;
+      padding-bottom: 5px;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- Offer Bar -->
+    <div id="offer">
+        Limited Time Offer! Free shipping on orders above $50
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <img src="Project_images\Saeed-Ghani-Logo.webp" style="width: 140px;">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+   
+    <img src="Project_images\Haider-Banner.webp" id="mainPic" alt="Main Image">
+
+    
+    <div class="container my-4">
+        <h2 id="featureProduct">Featured Products</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="Project_images\Charcoal-Face-Wash_.webp" class="card-img-top" alt="Product 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Charcoal FaceWash</h5>
+                        <p class="card-text">This is a great product that solves all your problems.</p>
+                        <p class="price-tag">Rs.480</p>
+                        <a href="#" class="btn btn-success">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="Project_images\Vitamin-C-Face-Wash1.webp" class="card-img-top" alt="Product 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Vitamin C Face Wash</h5>
+                        <p class="card-text">This product will make your life easier and happier.</p>
+                        <p class="price-tag">Rs.550</p>
+                        <a href="#" class="btn btn-success">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="Project_images\Sun-Block2.webp" class="card-img-top" alt="Product 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Sun Block SPF 60</h5>
+                        <p class="card-text">The best product to gift your loved ones.</p>
+                        <p class="price-tag">Rs.450</p>
+                        <a href="#" class="btn btn-success">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="divider">
+        More Products
+    </div>
+
+        <div class="row">
+          <div class="col-md-4">
+              <div class="card h-100">
+                  <img src="Project_images\Haider._1024x1024.webp" class="card-img-top" alt="Product 1">
+                  <div class="card-body">
+                      <h5 class="card-title">Haider Perfume</h5>
+                      <p class="card-text">This is a great perfume that make you smell special.</p>
+                      <p class="price-tag">Rs.4800</p>
+                      <a href="#" class="btn btn-success">Buy Now</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="card h-100">
+                  <img src="Project_images\BestSellers\Hair_Growth_Water_1024x1024.webp" class="card-img-top" alt="Product 2">
+                  <div class="card-body">
+                      <h5 class="card-title">Hair growth water</h5>
+                      <p class="card-text">Best for hair fall and growth.Limited stocks</p>
+                      <p class="price-tag">Rs.550</p>
+                      <a href="#" class="btn btn-success">Buy Now</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="card h-100">
+                  <img src="Project_images\retinol1.webp" class="card-img-top" alt="Product 3">
+                  <div class="card-body">
+                      <h5 class="card-title">Retinol Cream</h5>
+                      <p class="card-text">Best for wrinkles from saeed ghani</p>
+                      <p class="price-tag">Rs.850</p>
+                      <a href="#" class="btn btn-success">Buy Now</a>
+                  </div>
+              </div>
+          </div>
+
+          
+      </div>
+  </div>
+    </div>
+
+
+    <footer>
+      <div id="above-footer">
+
+        <img class="footrimg" src="Project_images\newsletter_deskptop_2048x.jpg">
+      </div>
+
+      <div id="contact">
+        <img class="image" src="Project_images\Screenshot 2024-10-23 101733.png ">
+      </div>
+    </footer>
+
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

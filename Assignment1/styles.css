@@ -175,7 +175,6 @@ body {
       content: "";
       flex: 1;
       border-bottom: 1.5px solid #dfd9d9; /* Adjust the line thickness and color */
-      
     }
     .divider::before {
       margin-right: 10px; /* Space between the text and the left line */
