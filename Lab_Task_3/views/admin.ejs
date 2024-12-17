@@ -10,14 +10,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
+        /* Apply the background image to the body */
         body {
-            background-color: #f8f9fa;
+            background-image: url('pexels-eberhardgross-640781.jpg'); /* Background image URL */
+            background-size: cover;
+            background-position: center;
             font-family: Arial, sans-serif;
         }
 
         /* Header styling */
         .header {
-            background-color: #343a40;
+            background-color: rgba(52, 58, 64, 0.6); /* Slight transparency for header */
             color: white;
             padding: 20px;
             text-align: center;
@@ -31,7 +34,7 @@
         /* Styling the Add New Product button */
         .add-product-btn {
             font-weight: bold;
-            background-color: #28a745;
+            background-color: #343a40;
             color: white;
             margin: 20px 0;
             padding: 10px 20px;
@@ -41,17 +44,18 @@
         }
 
         .add-product-btn:hover {
-            background-color: #218838;
+            background-color: lightslategray;
             text-decoration: none;
             color: white;
         }
 
         /* Styling for the product table */
         .product-table {
-            background-color: #ffffff;
+            background-color: rgba(255, 255, 255, 0.8); /* Transparent background for table */
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             overflow: hidden;
+            backdrop-filter: blur(5px); /* Optional: adds blur to the background behind the table */
         }
 
         .table th, .table td {
@@ -69,7 +73,7 @@
 <body>
     <!-- Header -->
     <div class="header">
-        <h1>Admin Panel</h1>
+        <h1 style="font-family:'Courier New', Courier, monospace; letter-spacing: 0px;">ADMIN PANEL</h1>
     </div>
 
     <!-- Main Container -->
@@ -91,7 +95,7 @@
                         <th>Actions</th>
                     </tr>
                 </thead>
-                
+                <!-- Table rows will be populated dynamically -->
             </table>
         </div>
     </div>

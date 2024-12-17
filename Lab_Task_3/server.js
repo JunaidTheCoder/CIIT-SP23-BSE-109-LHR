@@ -19,5 +19,10 @@ server.get("/formPage.ejs", (req, res) => {
   });
 
 server.listen(5000, () => {
-  console.log('Server is running on port 5000');
+  console.log('              0    C      ');
+  console.log('            0      O     ');
+  console.log('          0        N     ');
+  console.log('   0    0          S      ');
+  console.log('     0             O         ');
+  console.log('                   L         ');
 });
