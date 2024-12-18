@@ -3,12 +3,12 @@ const Product = require('../../models/product');
 const Category = require('../../models/category');
 const router = express.Router();
 
-// Admin dashboard route
+
 router.get('/admin', (req, res) => {
   res.render('admin.ejs');
 });
 
-// Product CRUD routes
+
 router.get('/products', async (req, res) => {
   try {
     const products = await Product.find().populate('category');
@@ -65,7 +65,7 @@ router.get('/products/delete/:id', async (req, res) => {
   }
 });
 
-// Category CRUD routes
+
 router.get('/categories', async (req, res) => {
   try {
     const categories = await Category.find();

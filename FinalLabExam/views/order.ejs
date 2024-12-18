@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders Table</title>
+
+    <style>
+        /* Universal Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('flat-design-shopping-pattern-design_23-2149656934.jpg'); /* Add the background image here */
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Container for the table */
+        .container {
+            background-color: rgba(254, 227, 168, 0.9); /* Transparent white background */
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 90%;
+            max-width: 1200px;
+            overflow-x: auto;
+        }
+
+        /* Heading styling */
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #343a40;
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table th,
+        table td {
+            padding: 12px 20px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #343a40;
+            color: white;
+            font-weight: bold;
+        }
+
+        table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Responsive Table */
+        @media screen and (max-width: 768px) {
+            table th,
+            table td {
+                font-size: 14px;
+                padding: 8px 12px;
+            }
+
+            .container {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Main Container -->
+    <div class="container">
+        <h2>Order Details</h2>
+        <!-- Orders Table -->
+        <table id="ordersTable">
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Customer Name</th>
+                    <th>Address</th>
+                    <th>Total Amount</th>
+                    <th>Order Date and Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Sample Data for Orders -->
+                <tr>
+                    <td>003</td>
+                    <td>Muzammil Hussain</td>
+                    <td>House 457, LDA Avenue 1, Lahore</td>
+                    <td>4500.00</td>
+                    <td>2024-12-10 10:30 AM</td>
+                </tr>
+                <tr>
+                    <td>002</td>
+                    <td>Junaid Ahmed</td>
+                    <td>459 House, Dreams Garden, Islamabad</td>
+                    <td>11200.50</td>
+                    <td>2024-12-17 04:15 PM</td>
+                </tr>
+                <tr>
+                    <td>001</td>
+                    <td>Ahsan Junaid Amin</td>
+                    <td>789 Nisar Colony, Samnabad, Faisalabad</td>
+                    <td>1750.99</td>
+                    <td>2024-12-20 01:05 PM</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Function to sort the table rows by 'Order Date and Time' in descending order
+        function sortTableByDate() {
+            const table = document.getElementById('ordersTable');
+            const rows = Array.from(table.rows).slice(1); // Get all rows except the header
+            rows.sort((a, b) => {
+                const dateA = new Date(a.cells[4].innerText); // Get the date from the 5th column
+                const dateB = new Date(b.cells[4].innerText);
+                return dateB - dateA; // Sort in descending order
+            });
+
+            // Reorder rows in the table
+            rows.forEach(row => table.appendChild(row));
+        }
+
+        // Call the function to sort the table when the page loads
+        window.onload = sortTableByDate;
+    </script>
+
+</body>
+
+</html>
