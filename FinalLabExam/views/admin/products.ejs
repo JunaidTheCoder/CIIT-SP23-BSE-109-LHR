@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Products</title>
+</head>
+<body>
+  <h1>Products List</h1>
+  <ul>
+    <% products.forEach(function(product) { %>
+      <li>
+        <%= product.name %> - <%= product.category.name %>
+        <a href="/admin/products/edit/<%= product._id %>">Edit</a>
+        <a href="/admin/products/delete/<%= product._id %>">Delete</a>
+      </li>
+    <% }) %>
+  </ul>
+  <a href="/admin/products/add">Add New Product</a>
+</body>
+</html>
