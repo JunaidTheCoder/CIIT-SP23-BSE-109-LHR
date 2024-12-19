@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Google</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('pexels-philippedonn-1169754.jpg');
+  background-size: cover; /* Ensures the image covers the entire page */
+  background-position: center center; /* Centers the image */
+  background-attachment: fixed; /* Keeps the image fixed while scrolling */
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ensures the body takes up the full viewport height */
+  margin: 0; /* Removes default margin */
+}
+
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login-box {
+  background-color: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  font-size: 14px;
+  color: #333;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+  display: none;
+}
+
+.login-btn {
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.login-btn:hover {
+  background-color: #1558b0;
+}
+
+.extra-links {
+  margin-top: 20px;
+}
+
+.extra-links a {
+  color: #1a73e8;
+  font-size: 14px;
+  text-decoration: none;
+  display: block;
+}
+
+.extra-links a:hover {
+  text-decoration: underline;
+}
+
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-box">
+      <h1>Login</h1>
+      <form id="loginForm" onsubmit="return validateForm()">
+        <div class="input-group">
+          <label for="email">Email or phone</label>
+          <input type="text" id="email" name="email" placeholder="Enter your email or phone">
+          <span id="emailError" class="error-message"></span>
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter your password">
+          <span id="passwordError" class="error-message"></span>
+        </div>
+        <a href="index" class="login-btn">Next</a>
+      </form>
+      <div class="extra-links">
+        <a href="#">Forgot email?</a>
+        <a href="#">Create account</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script1.js"></script>
+</body>
+</html>

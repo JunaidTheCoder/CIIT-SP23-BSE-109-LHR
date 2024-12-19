@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Management</title>
+
+    <style>
+        /* Universal Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('pexels-philippedonn-1169754.jpg'); /* Add your background image here */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: white;
+        }
+
+        /* Container Styling */
+        .container {
+            width: 60%;
+            max-width: 1200px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Heading Styling */
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table th,
+        table td {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #333;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Order Status Styles */
+        .status {
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 5px;
+            animation: changeColor 3s infinite;
+        }
+
+        .pending {
+            background-color: orange;
+            
+        }
+
+        .completed {
+            background-color: green;
+            
+        }
+
+        .returned {
+            background-color: red;
+            animation-delay: 2s;
+        }
+
+        /* Status Color Animation */
+        
+        /* Responsive Table */
+        @media (max-width: 768px) {
+            table th,
+            table td {
+                padding: 10px;
+                font-size: 14px;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Order Management</h2>
+        <!-- Orders Table -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Customer Name</th>
+                    <th>Order Price</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>001</td>
+                    <td>Ahsan Junaid</td>
+                    <td>7500.00</td>
+                    <td><div class="status pending">Pending</div></td>
+                </tr>
+                <tr>
+                    <td>002</td>
+                    <td>Muzammil Hussain</td>
+                    <td>11200.50</td>
+                    <td><div class="status completed">Completed</div></td>
+                </tr>
+                <tr>
+                    <td>003</td>
+                    <td>Junaid Ahmed</td>
+                    <td>1750.99</td>
+                    <td><div class="status returned">Returned</div></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>

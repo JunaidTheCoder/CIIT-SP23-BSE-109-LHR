@@ -23,8 +23,8 @@
 
         /* Centering and styling the form */
         .form-container {
-            background: #f0ca91 rgba(245, 219, 89, 0.4) ; /* Skin-tone color */
-            padding: 40px 30px; /* Extra padding for top and bottom */
+            background: #f0ca91 rgba(245, 219, 89, 0.4);
+            padding: 40px 30px;
             border-radius: 12px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
             width: 90%;
@@ -33,7 +33,6 @@
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
 
-        /* Hover effect on the form */
         .form-container:hover {
             transform: scale(1.03);
             box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
@@ -59,7 +58,7 @@
         .form-container textarea {
             width: 100%;
             padding: 12px;
-            margin-bottom: 20px; /* More spacing between inputs */
+            margin-bottom: 20px;
             border: 1px solid #ddd;
             border-radius: 8px;
             box-sizing: border-box;
@@ -67,7 +66,6 @@
             transition: border-color 0.3s ease;
         }
 
-        /* Focus effect on input fields */
         .form-container input:focus,
         .form-container textarea:focus {
             border-color: #5cb85c;
@@ -78,7 +76,6 @@
             resize: none;
         }
 
-        /* Submit button styling */
         .btn-submit {
             background-color: #5cb85c;
             color: white;
@@ -91,13 +88,11 @@
             transition: background-color 0.3s ease, transform 0.2s ease;
         }
 
-        /* Button hover effect */
         .btn-submit:hover {
             background-color: #4cae4c;
             transform: scale(1.05);
         }
 
-        /* Button focus effect */
         .btn-submit:focus {
             outline: none;
         }
@@ -105,30 +100,60 @@
 </head>
 
 <body>
-    <!-- Centered form container -->
     <div class="form-container">
         <h2>Add New Product</h2>
-        <form action="/your_form_endpoint" method="POST">
-            <!-- Product ID -->
+        <form id="productForm">
             <label for="productID">Product ID</label>
             <input type="text" id="productID" name="productID" placeholder="Enter Product ID" required>
 
-            <!-- Product Name -->
             <label for="productName">Product Name</label>
             <input type="text" id="productName" name="productName" placeholder="Enter Product Name" required>
 
-            <!-- Product Description -->
             <label for="productDescription">Product Description</label>
             <textarea id="productDescription" name="productDescription" rows="3" placeholder="Enter Product Description" required></textarea>
 
-            <!-- Price -->
             <label for="price">Price</label>
             <input type="text" id="price" name="price" placeholder="Enter Price" required>
 
-            <!-- Submit Button -->
-            <button type="submit" class="btn-submit">Submit</button>
+            <a href="adminn"  class="btn-submit" onclick="validateForm()">Submit</a>
         </form>
     </div>
+
+    <script >
+        // Function to validate the form and ask for confirmation before submission
+function validateForm() {
+    // Get the form elements
+    var productID = document.getElementById('productID').value;
+    var productName = document.getElementById('productName').value;
+    var productDescription = document.getElementById('productDescription').value;
+    var price = document.getElementById('price').value;
+
+    // Validate that all fields are filled
+    if (productID == "" || productName == "" || productDescription == "" || price == "") {
+        alert("All fields must be filled out!");
+        return false; // Stop form submission
+    }
+
+    // Validate price is a number
+    var priceValue = parseFloat(price);
+    if (isNaN(priceValue) || priceValue <= 0) {
+        alert("Please enter a valid price.");
+        return false;
+    }
+
+    // Confirm before submission
+    var confirmation = confirm("Are you sure you want to submit the form?");
+    if (confirmation) {
+        alert("Form submitted successfully!");
+        // Submit the form (you can change this to a form submission if needed)
+        // For example, using form submission (if you have an action URL set):
+        // document.getElementById('productForm').submit();
+    } else {
+        alert("Form submission canceled.");
+    }
+}
+
+    </script>
 </body>
 
 </html>

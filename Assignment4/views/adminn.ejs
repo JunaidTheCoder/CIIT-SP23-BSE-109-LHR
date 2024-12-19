@@ -67,6 +67,20 @@
             background-color: #343a40;
             color: #ffffff;
         }
+
+        /* Remove button styling */
+        .btn-remove {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .btn-remove:hover {
+            background-color: #c82333;
+        }
     </style>
 </head>
 
@@ -97,13 +111,35 @@
                         <th>Actions</th>
                     </tr>
                 </thead>
-                <!-- Table rows will be populated dynamically -->
+                <tbody>
+                    <!-- Example product row -->
+                    <tr>
+                        <td>001</td>
+                        <td>Saeed Ghani Perfume</td>
+                        <td>5000</td>
+                        <td>Perfumes</td>
+                        <td>
+                            <!-- Remove button -->
+                            <a href="admin" class="btn-remove" >Remove</a>
+                        </td>
+                    </tr>
+                </tbody>
             </table>
         </div>
     </div>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Function to remove product (you can implement actual functionality here)
+        function removeProduct(productId) {
+            if (confirm("Are you sure you want to remove this product?")) {
+                // In a real app, here you would send a request to remove the product from the database
+                alert("Product with ID " + productId + " removed.");
+            }
+        }
+    </script>
 </body>
 
 </html>
